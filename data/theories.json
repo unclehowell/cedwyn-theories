@@ -1,0 +1,337 @@
+{
+ "schema": "theories/1",
+ "synced_at": "2026-11-03T05:09:09Z",
+ "sources": [
+  {
+   "ref": "main",
+   "files": [
+    "foi-chestnuts.json",
+    "foi-response-attachments.json",
+    "places.json",
+    "recreation-scenes.json",
+    "screening.json"
+   ]
+  }
+ ],
+ "framing": "Each entry is the family's open working theory, not checked, shown with what cuts against it.",
+ "counts": {
+  "theories": 6,
+  "open": 5,
+  "tested": 1,
+  "evidence_ids": 21,
+  "in_central": 5
+ },
+ "theories": [
+  {
+   "id": "TH-06",
+   "title": "Bounced-notice theory",
+   "added": "2026-11-03",
+   "status": "tested",
+   "status_label": "Tested · the records so far do not match it",
+   "summary": "Some recipients of the family's record-preservation notices might be able to read emails that show as bounced on the sender's side, so that a bounce would leave room to write later that no notice arrived, and to date any disposal of records before the first notice they accept.",
+   "evidence_for": [],
+   "against": [
+    "All four bounces to these recipients (February, June, August and September 2026) were refused by the recipient's own mail server at the address check, before the message text is sent, so the text never reached them.",
+    "Each bounce went to a closed or wrong address; each recipient had a working address that accepted the notices.",
+    "The preservation notice of 28 September 2026 did not bounce for any of these recipients.",
+    "Bounces are common in the family's mailbox overall, across many unrelated recipients.",
+    "No recipient has dated a disposal of records to a time after a bounce."
+   ],
+   "test": "A subject access request for each recipient's mail-gateway logs (accepted, refused, quarantined) for the family's emails; a message trace for the 28 September notice.",
+   "test_ids": [],
+   "see": [
+    [
+     "That Old Chestnut",
+     "/that-old-chestnut/"
+    ]
+   ]
+  },
+  {
+   "id": "TH-04",
+   "title": "First “not held” replies can understate what a body holds",
+   "added": "2026-11-03",
+   "status": "open",
+   "status_label": "Open · two cases so far",
+   "summary": "Two bodies first replied that they held nothing in scope, then produced a record after a challenge or a fresh look.",
+   "evidence_for": [
+    {
+     "id": "TOC-F01",
+     "note": "Amgueddfa Cymru – Museum Wales reply",
+     "register": "That Old Chestnut",
+     "href": "/that-old-chestnut/#cn-toc-f01",
+     "in_central": true,
+     "file": "foi-chestnuts.json",
+     "title": "Amgueddfa Cymru – Museum Wales · reply of 2026-08-25",
+     "date": "2026-08-25",
+     "holder": "Amgueddfa Cymru – Museum Wales"
+    },
+    {
+     "id": "TOC-F02",
+     "note": "Historic England reply",
+     "register": "That Old Chestnut",
+     "href": "/that-old-chestnut/#cn-toc-f02",
+     "in_central": true,
+     "file": "foi-chestnuts.json",
+     "title": "Historic England · reply of 2026-10-21",
+     "date": "2026-10-21",
+     "holder": "Historic England"
+    }
+   ],
+   "against": [
+    "In both cases the holder corrected the reply itself; an ordinary search error explains it.",
+    "Two cases do not make a pattern."
+   ],
+   "test": "Track every “not held” reply for a later find, and ask each body for the search terms it used.",
+   "test_ids": [],
+   "see": [
+    [
+     "Peekaboo",
+     "/peekaboo/"
+    ],
+    [
+     "That Old Chestnut",
+     "/that-old-chestnut/"
+    ]
+   ]
+  },
+  {
+   "id": "TH-05",
+   "title": "A 1928 end to rent would have barred any action to recover the house about 1940",
+   "added": "2026-11-02",
+   "status": "open",
+   "status_label": "Open · not checked",
+   "summary": "The family's c.1974 statement records that the last rent was paid in 1928. If the house parcel stopped being let then, any right to recover it accrued in 1928 and was barred about twelve years later, before the 1949 re-grant and the 1955 date the 1987 court used.",
+   "evidence_for": [
+    {
+     "id": "GHF-E196-01",
+     "note": "the family's c.1974 statement",
+     "register": "Legal Wiki evidence",
+     "href": "/wiki/",
+     "in_central": false
+    }
+   ],
+   "against": [
+    "The 1987 judgment records rent arrears in the mid-1930s and late 1940s, which implies a tenancy continuing after 1928.",
+    "The 1928 rent receipt has not been found; only a later diary reference is held."
+   ],
+   "test": "The estate rental books and plan book for c.1938–44, and any 1928 estate rental that drops the house parcel.",
+   "test_ids": [],
+   "see": [
+    [
+     "Research Library",
+     "/research/"
+    ]
+   ]
+  },
+  {
+   "id": "TH-03",
+   "title": "Bodies with records at stake answer on process, not substance",
+   "added": "2026-10-27",
+   "status": "open",
+   "status_label": "Open · our coding, not checked",
+   "summary": "In the request correspondence (913 emails, 57 bodies), the bodies that hold registration, demolition and burial records reply about process and rarely address the events asked about, while archives and museums with nothing at stake explain their searches in detail.",
+   "evidence_for": [
+    {
+     "id": "TOC-F03",
+     "note": "Vale of Glamorgan Council reply",
+     "register": "That Old Chestnut",
+     "href": "/that-old-chestnut/#cn-toc-f03",
+     "in_central": true,
+     "file": "foi-chestnuts.json",
+     "title": "Vale of Glamorgan Council · reply of 2026-06-02",
+     "date": "2026-06-02",
+     "holder": "Vale of Glamorgan Council"
+    },
+    {
+     "id": "TOC-F04",
+     "note": "Heneb (HER) reply",
+     "register": "That Old Chestnut",
+     "href": "/that-old-chestnut/#cn-toc-f04",
+     "in_central": true,
+     "file": "foi-chestnuts.json",
+     "title": "Heneb (Historic Environment Record) · reply of 2026-05-22",
+     "date": "2026-05-22",
+     "holder": "Heneb (Historic Environment Record)"
+    },
+    {
+     "id": "TOC-L10",
+     "note": "HM Land Registry reply",
+     "register": "That Old Chestnut",
+     "href": "/that-old-chestnut/#cn-toc-l10",
+     "in_central": true,
+     "file": "foi-chestnuts.json",
+     "title": "HM Land Registry · reply of date not yet read",
+     "date": "",
+     "holder": "HM Land Registry"
+    }
+   ],
+   "against": [
+    "Narrow searches, old files and routine destruction explain many short replies without any intent.",
+    "The counts come from our own coding of the emails, which no one else has checked."
+   ],
+   "test": "Internal reviews and regulator decisions that require a body to show the search it made.",
+   "test_ids": [],
+   "see": [
+    [
+     "That Old Chestnut",
+     "/that-old-chestnut/"
+    ]
+   ]
+  },
+  {
+   "id": "TH-02",
+   "title": "The 1974 letters did the work of an enforcement that was running out of time",
+   "added": "2026-10-26",
+   "status": "open",
+   "status_label": "Open · not checked",
+   "summary": "Leave to enforce the 1962 possession order was given in September 1974, about 12 weeks before the order's 12-year anniversary. The warrant was withdrawn on 31 Oct 1974 for lack of notice, and the licence letters are dated the same day. The Court of Appeal later held that those letters turned the occupation into a licence.",
+   "evidence_for": [
+    {
+     "id": "EV-0049",
+     "note": "withdrawal of the 1974 warrant",
+     "register": "Evidence catalogue",
+     "href": "/docs/",
+     "in_central": false
+    },
+    {
+     "id": "EV-0050",
+     "note": "31 Oct 1974 licence letters",
+     "register": "Evidence catalogue",
+     "href": "/docs/",
+     "in_central": false
+    }
+   ],
+   "against": [
+    "The House of Lords held in 1999 (Lowsley v Forbes) that the 12-year limit on actions on a judgment does not stop execution itself, so the clock may not have bound anyone in law."
+   ],
+   "test": "The 1974 leave application and its sworn statement (MR-0012). The county court replied that it holds nothing because of age (MR-0014).",
+   "test_ids": [
+    {
+     "id": "MR-0012",
+     "note": "",
+     "register": "Missing-records register",
+     "href": "/research/missing-records/",
+     "in_central": false
+    },
+    {
+     "id": "MR-0014",
+     "note": "",
+     "register": "Missing-records register",
+     "href": "/research/missing-records/",
+     "in_central": false
+    }
+   ],
+   "see": [
+    [
+     "Research Library",
+     "/research/"
+    ]
+   ]
+  },
+  {
+   "id": "TH-01",
+   "title": "Twelve-year gaps between a refused arrangement and a registration",
+   "added": "2026-10-26",
+   "status": "open",
+   "status_label": "Open · partly matches the records",
+   "summary": "On three lines of the land’s history (woodland, green, house), a permissive arrangement the family refused was followed by a deed or registration in another name roughly 12 years later: 1949 to 1961, 1958/9 to 1970, 1974 to 1983. Twelve years is the limitation period for recovering land.",
+   "evidence_for": [
+    {
+     "id": "EV-0040",
+     "note": "1961 deed recited on the woodland title",
+     "register": "Evidence catalogue",
+     "href": "/docs/",
+     "in_central": false
+    },
+    {
+     "id": "EV-0039",
+     "note": "1958/9 tenancy offer",
+     "register": "Evidence catalogue",
+     "href": "/docs/",
+     "in_central": false
+    },
+    {
+     "id": "EV-0044",
+     "note": "1970 green registration",
+     "register": "Evidence catalogue",
+     "href": "/docs/",
+     "in_central": false
+    },
+    {
+     "id": "EV-0050",
+     "note": "31 Oct 1974 licence letters",
+     "register": "Evidence catalogue",
+     "href": "/docs/",
+     "in_central": false
+    },
+    {
+     "id": "EV-0066",
+     "note": "1983 application to register the house",
+     "register": "Evidence catalogue",
+     "href": "/docs/",
+     "in_central": false
+    }
+   ],
+   "against": [
+    "Across all landholder moves from 1928 to 1988 there is no regular 12-year rhythm; the gap holds per line, not as a cycle.",
+    "A green registration rests on 20 years' use as of right, not 12 years' possession.",
+    "Only three lines, and the start dates were picked after the pattern was noticed."
+   ],
+   "test": "Any record showing whether the occupier was told at each step (missing-records MR-0007, MR-0010, MR-0017, MR-0012, MR-0020, MR-0021).",
+   "test_ids": [
+    {
+     "id": "MR-0007",
+     "note": "",
+     "register": "Missing-records register",
+     "href": "/research/missing-records/",
+     "in_central": false
+    },
+    {
+     "id": "MR-0010",
+     "note": "",
+     "register": "Missing-records register",
+     "href": "/research/missing-records/",
+     "in_central": false
+    },
+    {
+     "id": "MR-0017",
+     "note": "",
+     "register": "Missing-records register",
+     "href": "/research/missing-records/",
+     "in_central": false
+    },
+    {
+     "id": "MR-0012",
+     "note": "",
+     "register": "Missing-records register",
+     "href": "/research/missing-records/",
+     "in_central": false
+    },
+    {
+     "id": "MR-0020",
+     "note": "",
+     "register": "Missing-records register",
+     "href": "/research/missing-records/",
+     "in_central": false
+    },
+    {
+     "id": "MR-0021",
+     "note": "",
+     "register": "Missing-records register",
+     "href": "/research/missing-records/",
+     "in_central": false
+    }
+   ],
+   "see": [
+    [
+     "Research Library",
+     "/research/"
+    ],
+    [
+     "Missing records",
+     "/research/missing-records/"
+    ]
+   ]
+  }
+ ]
+}
