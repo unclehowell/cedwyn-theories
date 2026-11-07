@@ -18,6 +18,10 @@ python3 tools/theories_sync.py --ref main --ref <branch>   # overlay an unmerged
 ```
 First run: 3 Nov 2026, ref `main`: 6 theories, 21 evidence IDs, 5 resolved in the central catalogue.
 
+Schedule (7 Nov 2026): `.github/workflows/sync-central.yml` runs the sync every 6 hours (cron `50 */6 * * *`) and on demand,
+read-only against the central catalogue, and commits `data/theories.json` only when a theory or a resolved record changed.
+While the page edit freeze is on it leaves the server-rendered cards in `index.html` alone (`RENDER_HTML: 'no'`). See #5.
+
 ## Hallmarks
 - Standard header and burger (`ghf-boot.js`), day/night theme from the header toggle (`html[data-ghf-mode]`), the Garden banner
   (loaded by `ghf-boot.js`, the one site-wide promotion), slot "48 of 59" from the area registry; until the registry carries it,

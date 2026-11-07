@@ -1,0 +1,38 @@
+name: sync-central
+# This webapp's own data store. data/theories.json holds only what the Theories page shows: each theory and, for every
+# evidence ID it cites, the title, date and holder when the central catalogue (unclehowell/cedwyn data/core/records, main)
+# carries it, otherwise the register that holds it. tools/theories_sync.py pulls it read-only and runs the word gate.
+# Derived: never edited by hand. Every 6 hours and on demand; commits only when a theory or a resolved record changed
+# (a new sync time alone is not a change); never force-pushes.
+# RENDER_HTML: while the page edit freeze is on, the server-rendered cards in index.html are left as they are and only the
+# store is committed; set it to 'yes' when the freeze lifts. - Sion's Tab agent
+on:
+  schedule:
+    - cron: '50 */6 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: sync-central
+  cancel-in-progress: false
+env:
+  RENDER_HTML: 'no'
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main, fetch-depth: 1 }
+      - name: Pull the fields this webapp needs from the central catalogue
+        run: |
+          cp data/theories.json /tmp/before.json
+          python3 tools/theories_sync.py
+      - name: Commit when something changed
+        run: |
+          CHANGED=$(python3 -c "import json; a=json.load(open('/tmp/before.json')); b=json.load(open('data/theories.json')); k=lambda j:(j.get('counts'),j.get('theories')); print('yes' if k(a)!=k(b) else 'no')")
+          if [ "$CHANGED" != "yes" ]; then git checkout -- data/theories.json index.html; echo "no change"; exit 0; fi
+          git add data/theories.json
+          if [ "$RENDER_HTML" = "yes" ]; then git add index.html; else git checkout -- index.html; fi
+          git -c user.name="cedwyn-central-sync" -c user.email="actions@users.noreply.github.com" commit -q -m "data/theories.json: sync from the central catalogue"
+          git push origin HEAD:main
