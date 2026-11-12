@@ -1,27 +1,71 @@
 {
  "schema": "theories/1",
- "synced_at": "2026-11-03T05:09:09Z",
+ "synced_at": "2026-11-12T14:59:46Z",
  "sources": [
   {
    "ref": "main",
-   "files": [
-    "foi-chestnuts.json",
-    "foi-response-attachments.json",
-    "places.json",
-    "recreation-scenes.json",
-    "screening.json"
-   ]
+   "commit": "1f5fc00"
   }
  ],
  "framing": "Each entry is the family's open working theory, not checked, shown with what cuts against it.",
  "counts": {
-  "theories": 6,
-  "open": 5,
+  "theories": 7,
+  "open": 6,
   "tested": 1,
-  "evidence_ids": 21,
+  "evidence_ids": 24,
   "in_central": 5
  },
  "theories": [
+  {
+   "id": "TH-07",
+   "title": "The Williams family held Tŷ Mawr as freeholders, and the holding was reduced parcel by parcel",
+   "added": "2026-11-12",
+   "status": "open",
+   "status_label": "Open · not checked",
+   "summary": "The family's central working theory. The Williams family may have held Tŷ Mawr and land around it as a family of standing in the parish, owning as well as occupying it, rather than as tenants of the lord of the manor. On this reading the holding was reduced parcel by parcel over generations, and later records came to describe the family's occupation as a tenancy, then as permissive, then as adverse.",
+   "evidence_for": [
+    {
+     "id": "EV-0211",
+     "note": "1824 Stewart survey: “Cedfin or Ty Mawr Farm”",
+     "register": "Evidence catalogue",
+     "href": "/docs/",
+     "in_central": false
+    },
+    {
+     "id": "EV-0215",
+     "note": "c.1841 tithe: John Williams on 36 numbered plots",
+     "register": "Evidence catalogue",
+     "href": "/docs/",
+     "in_central": false
+    },
+    {
+     "id": "GHF-E196-01",
+     "note": "the family's c.1974 statement",
+     "register": "Legal Wiki evidence",
+     "href": "/wiki/",
+     "in_central": false
+    }
+   ],
+   "against": [
+    "The c.1841 tithe enters John Williams as occupier of the 36 plots, not as landowner: the landowner column names the Marquess of Bute for 33 of them and the Revd James Evans (glebe) for 3.",
+    "The 1824 survey is the Bute estate's own survey of its lands, and it includes the farm.",
+    "Cardiff Records (vol. 2) records the manor of Llandough as bought by the Earl of Bute in 1793, after Tewkesbury Abbey, the Crown's grant of 1543 and the Herberts and their heirs.",
+    "No deed, will or settlement putting the house in Williams ownership has been found yet.",
+    "The 1987 Court of Appeal decided possession for the registered side, on the record then before it."
+   ],
+   "test": "The free tenants named in the 1545 Llandough rent-roll and the 1596 manorial survey (both manors then had free tenants as well as demesne and copyhold); the schedule of the 1793 sale of the manor to the Earl of Bute, to see whether the house was demesne or a free tenant's holding; and any Williams deed, will or settlement for Llandough before 1824.",
+   "test_ids": [],
+   "see": [
+    [
+     "Research Library",
+     "/research/"
+    ],
+    [
+     "Evidence catalogue",
+     "/docs/"
+    ]
+   ]
+  },
   {
    "id": "TH-06",
    "title": "Bounced-notice theory",

@@ -1,17 +1,10 @@
-/* Theories v0.1.0 (3 Nov 2026) - Cedwyn editors.
+/* Theories v0.2.0 (12 Nov 2026) - Cedwyn editors.
    The page is server-rendered from data/theories.json by tools/theories_sync.py; this script adds the filters, the changelog
-   modal, the header's "48 of 59" until the area registry carries slot 48, and WebMCP tools for agents. */
+   modal, the page name in the header, and WebMCP tools for agents. Theories has no N-of-59 slot yet (v0.2.0). */
 (function(){
-var d=document,NAME="Theories",SLOT="48",OF="59",WORD={en:"of",cy:"o",es:"de"};
-function lg(){var l=(d.documentElement.getAttribute("lang")||"en").slice(0,2).toLowerCase();return WORD[l]?l:"en";}
+var d=document,NAME="Theories";
 function num(){var n=d.querySelector(".ghf-v2-chain .ghf-v2-name");if(!n)return false;
- var b=n.querySelector("b"),s=n.querySelector("small");
- if(s&&!s.hasAttribute("data-th-slot")&&b&&b.textContent.trim()===NAME)return true;
- if(b&&b.textContent!==NAME)b.textContent=NAME;
- var t=SLOT+" "+WORD[lg()]+" "+OF;
- if(!s){s=d.createElement("small");n.appendChild(s);}
- s.setAttribute("data-th-slot","");
- if(s.textContent!==t||!s.querySelector("a")){s.textContent="";var a=d.createElement("a");a.className="cw-parcel-link";a.href="/parcels/";a.setAttribute("data-parcel-slot",SLOT);a.setAttribute("data-parcel-of",OF);a.style.color="inherit";a.style.textDecoration="none";a.textContent=t;s.appendChild(a);}
+ var b=n.querySelector("b");if(b&&b.textContent!==NAME)b.textContent=NAME;
  return true;}
 function strip(){var up=d.querySelector(".ghf-v2-up");if(!up)return false;
  var want=up.classList.contains("cw-gdn-on")?"":"none";
