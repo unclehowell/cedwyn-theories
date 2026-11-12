@@ -1,8 +1,8 @@
-# Theories — webapp 48 of 59
+# Theories
 
 The family's open working theories about Great House Farm / Tŷ Mawr, Llandough. Every entry is a working theory, not checked,
 and shows the records it rests on, what cuts against it, and the record that would test it. Served at `/theories/`
-(snapshot branch `section/theories`; registered in `themes.json` with `"slot": 48`).
+(dedicated repository; registered in cedwyn `themes.json` with no N-of-59 slot, cedwyn#594; all 59 slots are taken).
 
 ## Data
 - `tools/theories.src.json`: the theories in neutral wording (title, summary, status, date added, evidence IDs for, what cuts
@@ -24,8 +24,7 @@ While the page edit freeze is on it leaves the server-rendered cards in `index.h
 
 ## Hallmarks
 - Standard header and burger (`ghf-boot.js`), day/night theme from the header toggle (`html[data-ghf-mode]`), the Garden banner
-  (loaded by `ghf-boot.js`, the one site-wide promotion), slot "48 of 59" from the area registry; until the registry carries it,
-  `theories.js` writes "48 of 59" into the header's numbering slot.
+  (loaded by `ghf-boot.js`, the one site-wide promotion), no N-of-59 slot yet (all 59 are taken; the owner decides whether Theories replaces one).
 - Header ‹ › step to slots 47 and 49 in the one nav chain (`/areas.json` "nav"); with no slot 49 built, › wraps to slot 1.
 - Version v0.1.0, changelog table in the ⓘ modal and `CHANGELOG.md`, release tag `theories-v0.1.0`. No paid version, so no
   version gate (version standard §1).
