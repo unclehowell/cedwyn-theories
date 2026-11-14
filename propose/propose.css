@@ -1,0 +1,19 @@
+/* Theories · propose a theory (v0.3.0). Uses the --th-* tokens from ../theories.css, day and night. */
+.tp-form{background:var(--th-card);border:1px solid var(--th-line);border-radius:12px;padding:1rem;margin:1rem 0}
+.tp-f{display:block;margin:0 0 .9rem}
+.tp-l{display:block;font-weight:600;font-size:.92rem;margin:0 0 .25rem}
+.tp-l small{font-weight:400;color:var(--th-mut);margin-left:.3rem}
+.tp-f input,.tp-f textarea{width:100%;font:inherit;font-size:16px;padding:.55rem .65rem;border:1px solid var(--th-line);border-radius:8px;background:var(--th-bg);color:var(--th-ink)}
+.tp-f textarea{resize:vertical;min-height:4.5rem}
+.tp-f input:focus-visible,.tp-f textarea:focus-visible,.tp-btn:focus-visible{outline:2px solid var(--th-acc);outline-offset:2px}
+.tp-gate{margin:0 0 .7rem;font-size:.9rem;min-height:1.2em}
+.tp-gate.tp-bad{border-left:3px solid var(--th-hi);padding-left:.6rem}
+.tp-gate.tp-ok{color:var(--th-acc)}
+.tp-actions{display:flex;flex-wrap:wrap;gap:.5rem;margin:0}
+.tp-btn{font:inherit;font-size:.9rem;min-height:44px;padding:.5rem .9rem;border-radius:999px;border:1px solid var(--th-line);background:var(--th-card);color:var(--th-ink);cursor:pointer}
+.tp-primary{background:var(--th-acc);border-color:var(--th-acc);color:#fff}
+html[data-ghf-mode="night"] .tp-primary{color:#0d0d10}
+.tp-card .tp-actions{margin-top:.6rem}
+.tp-json{white-space:pre-wrap;font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--th-said);border-radius:8px;padding:.6rem;margin:.5rem 0 0;overflow-wrap:anywhere}
+.th-list h2 small{font-weight:400;color:var(--th-mut);font-size:.8rem}
+@media(max-width:420px){.tp-form{padding:.8rem}.tp-btn{flex:1 1 100%}}
