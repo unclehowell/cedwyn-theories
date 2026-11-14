@@ -1,6 +1,6 @@
-/* Theories v0.2.0 (12 Nov 2026) - Cedwyn editors.
+/* Theories v0.3.0 (14 Nov 2026) - Cedwyn editors.
    The page is server-rendered from data/theories.json by tools/theories_sync.py; this script adds the filters, the changelog
-   modal, the page name in the header, and WebMCP tools for agents. Theories has no N-of-59 slot yet (v0.2.0). */
+   modal, the page name in the header, the link to propose/ (v0.3.0), and WebMCP tools for agents. Theories has no N-of-59 slot yet. */
 (function(){
 var d=document,NAME="Theories";
 function num(){var n=d.querySelector(".ghf-v2-chain .ghf-v2-name");if(!n)return false;
@@ -24,6 +24,8 @@ if(nav&&cards.length){nav.hidden=false;
  nav.addEventListener("click",function(ev){var b=ev.target.closest("button[data-f]");if(!b)return;var f=b.getAttribute("data-f");
   [].forEach.call(nav.querySelectorAll("button"),function(x){x.setAttribute("aria-pressed",x===b?"true":"false");});
   cards.forEach(function(c){var s=c.getAttribute("data-status");c.hidden=!(f==="all"||s===f);});});}
+var st=d.querySelector(".th-stats");
+if(st&&!d.querySelector(".tp-cta")){var cta=d.createElement("p"),ca=d.createElement("a");cta.className="tp-cta";cta.style.margin=".8rem 0 0";ca.style.cssText="display:inline-block;min-height:44px;line-height:44px;padding:0 .9rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;font-size:.9rem";ca.href="propose/";ca.textContent="Propose a theory";cta.appendChild(ca);st.parentNode.insertBefore(cta,st.nextSibling);}
 var dlg=d.getElementById("th-changelog"),opener=null;
 d.addEventListener("click",function(ev){var o=ev.target.closest("[data-th-info]");if(o&&dlg&&dlg.showModal){ev.preventDefault();opener=o;dlg.showModal();}
  if(ev.target.closest("[data-th-close]")&&dlg)dlg.close();if(ev.target===dlg)dlg.close();});
