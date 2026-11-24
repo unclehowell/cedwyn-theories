@@ -47,12 +47,8 @@
    ],
    "see": [
     [
-     "Research Library",
-     "/research/"
-    ],
-    [
-     "Missing records",
-     "/research/missing-records/"
+     "Evidence catalogue",
+     "/catalogue/"
     ]
    ]
   },
@@ -83,8 +79,8 @@
    ],
    "see": [
     [
-     "Research Library",
-     "/research/"
+     "Evidence catalogue",
+     "/catalogue/"
     ]
    ]
   },
@@ -118,7 +114,7 @@
    "see": [
     [
      "That Old Chestnut",
-     "/that-old-chestnut/"
+     "https://cedwyn.bucklerfamily.estate/that-old-chestnut/"
     ]
    ]
   },
@@ -148,11 +144,11 @@
    "see": [
     [
      "Peekaboo",
-     "/peekaboo/"
+     "https://cedwyn.bucklerfamily.estate/peekaboo/"
     ],
     [
      "That Old Chestnut",
-     "/that-old-chestnut/"
+     "https://cedwyn.bucklerfamily.estate/that-old-chestnut/"
     ]
    ]
   },
@@ -177,8 +173,8 @@
    "tests_ids": [],
    "see": [
     [
-     "Research Library",
-     "/research/"
+     "Evidence catalogue",
+     "/catalogue/"
     ]
    ]
   },
@@ -202,7 +198,7 @@
    "see": [
     [
      "That Old Chestnut",
-     "/that-old-chestnut/"
+     "https://cedwyn.bucklerfamily.estate/that-old-chestnut/"
     ]
    ]
   },
@@ -238,12 +234,8 @@
    "tests_ids": [],
    "see": [
     [
-     "Research Library",
-     "/research/"
-    ],
-    [
      "Evidence catalogue",
-     "/docs/"
+     "/catalogue/"
     ]
    ]
   }

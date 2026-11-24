@@ -18,10 +18,15 @@ REPO = 'unclehowell/cedwyn'
 UA = {'User-Agent': 'cedwyn-theories-sync'}
 # the editorial gate's word list, kept ROT13-encoded so this public file does not itself carry the words
 BANNED = re.compile(r'\b(' + codecs.decode(r'fnlf|pynvzf?|nppbeqvat gb|urnefnl|hairevsvrq|nyyrtrq|senhq\j*|fgbyra|pbafcvenpl', 'rot13') + r')\b', re.I)
+# Link targets. The site build (cedwyn tools/rewrite.py) prefixes every root path on this page with /theories/, so a
+# plain "/docs/" went live as /theories/docs/ (404; 40 dead links found 24 Nov 2026). Two forms survive the build:
+# /catalogue... (a reserved path, left as written) and https://cedwyn.bucklerfamily.estate/<path> (rewritten to /<path>).
+SITE = 'https://cedwyn.bucklerfamily.estate'
+def cat(i): return '/catalogue/?q=' + urllib.parse.quote(i)
 REGISTERS = [  # IDs the central catalogue does not carry live in these registers on the site
-    ('EV-', 'Evidence catalogue', '/docs/'), ('MR-', 'Missing-records register', '/research/missing-records/'),
-    ('GHF-', 'Legal Wiki evidence', '/wiki/'), ('TOC-', 'That Old Chestnut', '/that-old-chestnut/'),
-    ('KF-', 'Kissed Frogs', '/kissed-frogs/'), ('AR-', 'Research Library', '/research/')]
+    ('EV-', 'Evidence catalogue', None), ('MR-', 'Missing-records register', None),
+    ('GHF-', 'Legal Wiki evidence', SITE + '/wiki/'), ('TOC-', 'That Old Chestnut', SITE + '/that-old-chestnut/'),
+    ('KF-', 'Kissed Frogs', SITE + '/kissed-frogs/'), ('AR-', 'Research Library', None)]
 
 def get(url):
     with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r:
@@ -44,8 +49,8 @@ def records(files):
 
 def register(i):
     for p, t, u in REGISTERS:
-        if i.startswith(p): return t, u
-    return 'Site record', '/research/'
+        if i.startswith(p): return t, (u or cat(i))
+    return 'Site record', cat(i)
 
 def resolve(i, note, pool):
     t, u = register(i)
@@ -57,7 +62,7 @@ def resolve(i, note, pool):
             prov = r.get('provenance') or {}
             ref.update({'in_central': True, 'file': name, 'title': r.get('title', i), 'date': d or '',
                         'holder': prov.get('holder') or (r.get('finding') or {}).get('institution') or ''})
-    if i.startswith('TOC-'): ref['href'] = '/that-old-chestnut/#cn-' + i.lower()
+    if i.startswith('TOC-'): ref['href'] = SITE + '/that-old-chestnut/#cn-' + i.lower()
     return ref
 
 def main(argv):
